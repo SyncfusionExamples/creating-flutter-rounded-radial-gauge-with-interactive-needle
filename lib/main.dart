@@ -11,9 +11,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   double _needleValue = 4000;
 
-  void _updateNeedleValue(double value) {
+   void _updateNeedleValue(double value) {
     setState(() {
-      _needleValue = value;
+      _needleValue = double.parse(value.toStringAsFixed(2));
     });
   }
 
