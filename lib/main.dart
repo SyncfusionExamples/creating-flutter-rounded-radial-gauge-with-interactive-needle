@@ -11,10 +11,26 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   double _needleValue = 4000;
 
-   void _updateNeedleValue(double value) {
+  void _updateNeedleValue(double value) {
     setState(() {
       _needleValue = double.parse(value.toStringAsFixed(2));
     });
+  }
+
+  // Helper method to create a WidgetPointer with value and text
+  WidgetPointer _buildWidgetPointer(double value, double offset, String text) {
+    return WidgetPointer(
+      value: value,
+      offsetUnit: GaugeSizeUnit.logicalPixel,
+      offset: offset,
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 18,
+        ),
+      ),
+    );
   }
 
   @override
@@ -60,54 +76,10 @@ class _MyAppState extends State<MyApp> {
                 }
               },
             ),
-            const WidgetPointer(
-              value: 0,
-              offsetUnit: GaugeSizeUnit.logicalPixel,
-              offset: -55,
-              child: Text(
-                '0',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-            ),
-            const WidgetPointer(
-              value: 2000,
-              offsetUnit: GaugeSizeUnit.logicalPixel,
-              offset: -75,
-              child: Text(
-                '2000',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-            ),
-            const WidgetPointer(
-              value: 6000,
-              offsetUnit: GaugeSizeUnit.logicalPixel,
-              offset: -75,
-              child: Text(
-                '6000',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-            ),
-            const WidgetPointer(
-              value: 8000,
-              offsetUnit: GaugeSizeUnit.logicalPixel,
-              offset: -55,
-              child: Text(
-                '8000',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-            ),
+            _buildWidgetPointer(0, -55, '0'),
+            _buildWidgetPointer(2000, -75, '2000'),
+            _buildWidgetPointer(6000, -75, '6000'),
+            _buildWidgetPointer(8000, -55, '8000'),
           ],
           annotations: <GaugeAnnotation>[
             GaugeAnnotation(
