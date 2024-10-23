@@ -1,8 +1,8 @@
-# How to implement data point dragging on a Flutter Cartesian Chart 
+# How to create a rounded RadialGauge with interactive needle and text annotations?
 
 This repository contains a sample to Create a Interactive Needle and Text Annotations on a [Syncfusion RadialGauge](https://help.syncfusion.com/flutter/radial-gauge/getting-started) widget.
 
-Please refer the KB through this [link](https://support.syncfusion.com/agent/kb/16805).
+Please refer the KB through this link.
 
 ## Syncfusion controls:
 
