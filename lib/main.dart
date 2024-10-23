@@ -101,7 +101,7 @@ class _MyAppState extends State<MyApp> {
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
-      appBar: AppBar(title: const Text('SfRadialGauge Example')),
+      appBar: AppBar(title: const Text('Creating an Interactive Rounded Radial Gauge with Flutter')),
       body: const Center(
         child: MyApp(),
       ),
