@@ -1,4 +1,4 @@
-# How to create a rounded RadialGauge with interactive needle and text annotations?
+# How to create a rounded SfRadialGauge with interactive needle and text annotations?
 
 This repository contains a sample to Create a Interactive Needle and Text Annotations on a [Syncfusion RadialGauge](https://help.syncfusion.com/flutter/radial-gauge/getting-started) widget.
 
